@@ -1,0 +1,13 @@
+
+
+.navigation {
+  background-color: #E55233;
+}
+
+.newslist, .submitform {
+  background-color: #E5D6B7;
+}
+
+.hideform {
+  display: none ;
+}
