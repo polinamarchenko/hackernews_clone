@@ -22,10 +22,9 @@ label {
 	padding-bottom: 40px;
 }
 
-
 .navigation {
   	background-color: #E55233;
-	padding-top:10px;
+		padding-top:10px;
   	padding-left:20px;
 }
 
@@ -40,7 +39,7 @@ label {
 
 .btn-hacker {
 	background-color:#E55233;
-	color: "white";
+	color: white;
 }
 
 .hideform{

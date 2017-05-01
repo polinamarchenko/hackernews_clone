@@ -28,7 +28,7 @@ $(document).ready(function() {
   $topiclist.on("click", ".glyphicon", function(event) {
     $(event.target).toggleClass("glyphicon-star-empty");
     $(event.target).toggleClass("glyphicon-star");
-  })
+  });
 
   var $favorite = $(".favoritetoggle");
   $favorite.on("click", function() {
@@ -36,6 +36,6 @@ $(document).ready(function() {
       if (this.className === "glyphicon glyphicon-star-empty") {
         $(this).parent().toggleClass("hide-all");
       }
-    })
+    });
   });
 });
