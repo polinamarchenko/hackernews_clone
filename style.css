@@ -1,13 +1,40 @@
+body {
+	font-size:18px;
+}
 
+ul {
+	padding-top:10px;
+}
+
+li {
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+label {
+	display:inline-block;
+	width: 50px;
+}
+
+form {
+	padding-left:20px;
+}
 
 .navigation {
-  background-color: #E55233;
+  	background-color: #E55233;
+	padding-top: 10px;
+  	padding-left:20px;
+}
+
+.nav-title {
+	font-weight:600;
+	font-size: 20px;
 }
 
 .newslist, .submitform {
-  background-color: #E5D6B7;
+  	background-color: #E5D6B7;
 }
 
 .hideform {
-  display: none ;
+  	display: none ;
 }
