@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var formStatus = false;
   var $topiclist = $(".topiclist");
   var $form = $("form").on("submit", function(e) {
     e.preventDefault();
@@ -11,6 +12,12 @@ $(document).ready(function() {
   });
 
   var $lisubmit = $(".formtoggle").on("click", function() {
-    $(".submitform").toggleClass("hideform");
+    if (!formStatus) {
+      formStatus = true;
+      $(".submitform").slideDown(300);
+    } else {
+      formStatus = false;
+      $(".submitform").slideUp(300);
+    }
   });
 });
