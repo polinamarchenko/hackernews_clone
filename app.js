@@ -2,8 +2,8 @@ $(document).ready(function() {
   var formStatus = false;
   var $topiclist = $(".topiclist");
   var $favorite = $(".favoritetoggle");
-  var $all = $(".alltoggle")
-  
+  var $all = $(".alltoggle");
+
   //Form add item
   var $form = $("form").on("submit", function(e) {
     if ($("#url").val() === "" || $("#title").val() === "") {
@@ -47,14 +47,10 @@ $(document).ready(function() {
         $(this).parent().toggleClass("hide-all");
       }
     });
-<<<<<<< HEAD
-  });
-});
-=======
     $favorite.toggleClass("hide-all");
     $all.toggleClass("hide-all");
   });
-  
+
   //Toggle all
   $all.on("click", function() {
     $(".glyphicon").each(function() {
@@ -62,6 +58,5 @@ $(document).ready(function() {
     });
     $favorite.toggleClass("hide-all");
     $all.toggleClass("hide-all");
-  })
+  });
 });
->>>>>>> cb022ce4965f2e1817df27c1f269b7734f5538b1
