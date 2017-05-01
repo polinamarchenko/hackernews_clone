@@ -16,6 +16,12 @@ label {
 	width: 50px;
 }
 
+li a {
+	font-size:14px;
+	color:#696162;
+	padding-left:10px;
+}
+
 .submitform {
 	padding-left: 20px;
 	padding-top: 30px;
@@ -38,8 +44,13 @@ label {
   	background-color: #E5D6B7;
 }
 
-.btn-hacker {
+input.btn-hacker {
 	background-color:#E55233;
+	color: "white";
+}
+
+input.btn-hacker:hover {
+	background-color:#E58A76;
 	color: "white";
 }
 
@@ -53,4 +64,9 @@ li.hide-all {
 
 .hide-all {
 	display:none ;
+}
+
+.formtoggle:hover, .favoritetoggle:hover, .alltoggle:hover{
+	cursor:pointer;
+	color:#E58A76;
 }

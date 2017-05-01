@@ -1,13 +1,19 @@
 $(document).ready(function() {
   var formStatus = false;
   var $topiclist = $(".topiclist");
+  var $favorite = $(".favoritetoggle");
+  var $all = $(".alltoggle")
+  
+  //Form add item
   var $form = $("form").on("submit", function(e) {
     e.preventDefault();
     var $li = $("<li>");
     var $icon = $("<span>").addClass("glyphicon glyphicon-star-empty");
     var $topictext = $("<span>").addClass("topic-text");
-    $topictext.text($("#title").val() + " (" + $("#url").val() + ")");
-    $li.append($icon).append($topictext);
+    var $link = $("<a>").attr("href", $("#url").val())
+                        .text("(" + $("#url").val() + ")");
+    $topictext.text($("#title").val());
+    $li.append($icon).append($topictext).append($link);
     $topiclist.append($li);
     $form.trigger("reset");
   });
@@ -24,18 +30,28 @@ $(document).ready(function() {
   });
 
   //Toggle Icon code
-
   $topiclist.on("click", ".glyphicon", function(event) {
     $(event.target).toggleClass("glyphicon-star-empty");
     $(event.target).toggleClass("glyphicon-star");
   })
 
-  var $favorite = $(".favoritetoggle");
+  //Toggle favorite
   $favorite.on("click", function() {
     $(".glyphicon").each(function() {
       if (this.className === "glyphicon glyphicon-star-empty") {
         $(this).parent().toggleClass("hide-all");
       }
-    })
+    });
+    $favorite.toggleClass("hide-all");
+    $all.toggleClass("hide-all");
   });
+  
+  //Toggle all
+  $all.on("click", function() {
+    $(".glyphicon").each(function() {
+      $(this).parent().removeClass("hide-all");
+    });
+    $favorite.toggleClass("hide-all");
+    $all.toggleClass("hide-all");
+  })
 });
