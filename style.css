@@ -7,8 +7,8 @@ ul {
 }
 
 li {
-	padding-top:5px;
-	padding-bottom:5px;
+	padding-top:10px;
+	padding-bottom:10px;
 }
 
 label {
@@ -16,13 +16,16 @@ label {
 	width: 50px;
 }
 
-form {
-	padding-left:20px;
+.submitform {
+	padding-left: 20px;
+	padding-top: 30px;
+	padding-bottom: 40px;
 }
+
 
 .navigation {
   	background-color: #E55233;
-	padding-top: 10px;
+	padding-top:10px;
   	padding-left:20px;
 }
 
@@ -35,6 +38,19 @@ form {
   	background-color: #E5D6B7;
 }
 
-.hideform {
+.btn-hacker {
+	background-color:#E55233;
+	color: "white";
+}
+
+.hideform{
   	display: none ;
+}
+
+li.hide-all {
+	display:none ;
+}
+
+.hide-all {
+	display:none ;
 }
