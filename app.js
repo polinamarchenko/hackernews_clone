@@ -6,16 +6,21 @@ $(document).ready(function() {
   
   //Form add item
   var $form = $("form").on("submit", function(e) {
-    e.preventDefault();
-    var $li = $("<li>");
-    var $icon = $("<span>").addClass("glyphicon glyphicon-star-empty");
-    var $topictext = $("<span>").addClass("topic-text");
-    var $link = $("<a>").attr("href", $("#url").val())
-                        .text("(" + $("#url").val() + ")");
-    $topictext.text($("#title").val());
-    $li.append($icon).append($topictext).append($link);
-    $topiclist.append($li);
-    $form.trigger("reset");
+    if ($("#url").val() === "" || $("#title").val() === "") {
+      e.preventDefault();
+      alert("Please fill in empty fields");
+    } else {
+      e.preventDefault();
+      var $li = $("<li>");
+      var $icon = $("<span>").addClass("glyphicon glyphicon-star-empty");
+      var $topictext = $("<span>").addClass("topic-text");
+      var $link = $("<a>").attr("href", $("#url").val())
+                          .text("(" + $("#url").val() + ")");
+      $topictext.text($("#title").val());
+      $li.append($icon).append($topictext).append($link);
+      $topiclist.append($li);
+      $form.trigger("reset");
+      }
   });
 
   //Form slider

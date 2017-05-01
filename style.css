@@ -1,6 +1,10 @@
+/*Block*/
+
 body {
 	font-size:18px;
 }
+
+/*Element*/
 
 ul {
 	padding-top:10px;
@@ -21,6 +25,8 @@ li a {
 	color:#696162;
 	padding-left:10px;
 }
+
+/*Modifier*/
 
 .submitform {
 	padding-left: 20px;
@@ -43,32 +49,29 @@ li a {
   	background-color: #E5D6B7;
 }
 
-input.btn-hacker {
+.btn-hacker {
 	background-color:#E55233;
 	color: white;
 }
 
-input.btn-hacker:hover {
+.btn-hacker:hover {
 	background-color:#E58A76;
-	color: "white";
 }
 
 .hideform{
   	display: none ;
 }
 
-li.hide-all {
-	display:none ;
-}
-
 .hide-all {
 	display:none ;
 }
-<<<<<<< HEAD
-=======
 
 .formtoggle:hover, .favoritetoggle:hover, .alltoggle:hover{
 	cursor:pointer;
 	color:#E58A76;
 }
->>>>>>> cb022ce4965f2e1817df27c1f269b7734f5538b1
+
+li.hide-all {
+	display:none ;
+}
+
