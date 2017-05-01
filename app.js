@@ -38,7 +38,7 @@ $(document).ready(function() {
   $topiclist.on("click", ".glyphicon", function(event) {
     $(event.target).toggleClass("glyphicon-star-empty");
     $(event.target).toggleClass("glyphicon-star");
-  })
+  });
 
   //Toggle favorite
   $favorite.on("click", function() {
@@ -47,6 +47,10 @@ $(document).ready(function() {
         $(this).parent().toggleClass("hide-all");
       }
     });
+<<<<<<< HEAD
+  });
+});
+=======
     $favorite.toggleClass("hide-all");
     $all.toggleClass("hide-all");
   });
@@ -60,3 +64,4 @@ $(document).ready(function() {
     $all.toggleClass("hide-all");
   })
 });
+>>>>>>> cb022ce4965f2e1817df27c1f269b7734f5538b1

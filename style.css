@@ -34,10 +34,9 @@ li a {
 	padding-bottom: 40px;
 }
 
-
 .navigation {
   	background-color: #E55233;
-	padding-top:10px;
+		padding-top:10px;
   	padding-left:20px;
 }
 
@@ -75,3 +74,4 @@ li a {
 li.hide-all {
 	display:none ;
 }
+
