@@ -20,10 +20,24 @@ label {
 	width: 50px;
 }
 
-li a {
+.anchor{
 	font-size:14px;
 	color:#696162;
 	padding-left:10px;
+}
+
+.anchor:hover {
+	text-decoration-line: underline;
+	cursor: pointer;
+}
+
+.topic-text {
+	text-decoration: none;
+	color: black;
+}
+
+.topic-text:hover {
+	text-decoration: none;
 }
 
 /*Modifier*/

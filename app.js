@@ -6,17 +6,19 @@ $(document).ready(function() {
 
   //Form add item
   var $form = $("form").on("submit", function(e) {
-    if ($("#url").val() === "" || $("#title").val() === "") {
+    if (!$("#url").val() || !$("#title").val()) {
       e.preventDefault();
       alert("Please fill in empty fields");
     } else {
       e.preventDefault();
       var $li = $("<li>");
       var $icon = $("<span>").addClass("glyphicon glyphicon-star-empty");
-      var $topictext = $("<span>").addClass("topic-text");
-      var $link = $("<a>").attr("href", $("#url").val())
-                          .text("(" + $("#url").val() + ")");
-      $topictext.text($("#title").val());
+      var $topictext = $("<a>").attr("href", $("#url").val())
+                          .addClass("topic-text")
+                          .text($("#title").val());
+      var $link = $("<span>").addClass("anchor").text("(" + $("#url").val() + ")");
+
+      // $topictext.text($("#title").val());
       $li.append($icon).append($topictext).append($link);
       $topiclist.append($li);
       $form.trigger("reset");
@@ -58,5 +60,15 @@ $(document).ready(function() {
     });
     $favorite.toggleClass("hide-all");
     $all.toggleClass("hide-all");
+  });
+
+  //Togle filter on links
+  $topiclist.on("click", ".anchor", function(event) {
+      $(".anchor").filter(function(ind, value) {
+          return $(value).text() !== $(event.target).text();
+          })
+          .parent().addClass("hide-all");
+
+      $all.toggleClass("hide-all");
   });
 });
